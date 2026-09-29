@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: azure-mgmt-trafficmanager
-  version: 1.1.0
+  version: "2.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.zip
-  sha256: 35bf1902bf1589d626e35971e5aaa009e884094672b479b798cd1bb8d4f2fdf9
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 54d92b608a541c32a461e60784c4bbc1f04e497fb64eb429c62ac18ab7e6ce8c
 
 build:
   number: 0
